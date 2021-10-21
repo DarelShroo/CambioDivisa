@@ -18,6 +18,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CambioDivisa extends Application implements ControllerCambioDivisa {
+    GridPane gridpane;
+    ColumnConstraints firstColumn;
+    ColumnConstraints secondColumn;
+    HBox hBox;
     private Divisa to;
     private Divisa from;
     private ComboBox<Divisa> comboBoxDivisaTo;
@@ -47,31 +51,37 @@ public class CambioDivisa extends Application implements ControllerCambioDivisa 
         dolar = new Divisa("Dolar", 1.2007);
         yen = new Divisa("Yen", 132.33);
         alert = new Alert(Alert.AlertType.INFORMATION);
+        gridpane = new GridPane();
+        firstColumn = new ColumnConstraints();
+        secondColumn = new ColumnConstraints();
+        hBox = new HBox();
 
-        GridPane gridpane = new GridPane();
-        ColumnConstraints column1 = new ColumnConstraints();
-        column1.setPercentWidth(50);
-        ColumnConstraints column2 = new ColumnConstraints();
-        column2.setPercentWidth(50);
-        gridpane.getColumnConstraints().addAll(column1, column2);
+        firstColumn.setPercentWidth(50);
+        secondColumn.setPercentWidth(50);
+
+        gridpane.getColumnConstraints().addAll(firstColumn, secondColumn);
+
         gridpane.setVgap(5);
         gridpane.setHgap(5);
 
         gridpane.setAlignment(Pos.CENTER);
-        column1.setHalignment(HPos.RIGHT);
-        column2.setHalignment(HPos.LEFT);
+        firstColumn.setHalignment(HPos.RIGHT);
+        secondColumn.setHalignment(HPos.LEFT);
+
         gridpane.add(textFieldDivisaFrom, 0, 0, 1, 1);
         gridpane.add(comboBoxDivisaFrom, 1, 0, 1, 1);
         gridpane.add(textFieldDivisaTo, 0, 1, 1, 1);
         gridpane.add(comboBoxDivisaTo, 1, 1, 1, 1);
 
-        HBox hBox = new HBox();
+
         hBox.setAlignment(Pos.CENTER);
         hBox.getChildren().addAll(buttonCambio);
+
         gridpane.add(hBox, 0, 2, 2, 1);
 
         ArrayList<Divisa> listDivisa = new ArrayList<>();
         Collections.addAll(listDivisa, euro, libra, dolar, yen);
+
         textFieldDivisaTo.setEditable(false);
         comboBoxDivisaTo.getSelectionModel().select(yen);
         comboBoxDivisaFrom.getSelectionModel().select(euro);
