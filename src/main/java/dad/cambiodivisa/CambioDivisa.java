@@ -116,4 +116,132 @@ public class CambioDivisa extends Application implements ControllerCambioDivisa 
             alert.showAndWait();
         }
     }
+
+    public void setGridpane(GridPane gridpane) {
+        this.gridpane = gridpane;
+    }
+
+    public void setFirstColumn(ColumnConstraints firstColumn) {
+        this.firstColumn = firstColumn;
+    }
+
+    public void setSecondColumn(ColumnConstraints secondColumn) {
+        this.secondColumn = secondColumn;
+    }
+
+    public void sethBox(HBox hBox) {
+        this.hBox = hBox;
+    }
+
+    public void setTo(Divisa to) {
+        this.to = to;
+    }
+
+    public void setFrom(Divisa from) {
+        this.from = from;
+    }
+
+    public void setComboBoxDivisaTo(ComboBox<Divisa> comboBoxDivisaTo) {
+        this.comboBoxDivisaTo = comboBoxDivisaTo;
+    }
+
+    public void setComboBoxDivisaFrom(ComboBox<Divisa> comboBoxDivisaFrom) {
+        this.comboBoxDivisaFrom = comboBoxDivisaFrom;
+    }
+
+    public void setTextFieldDivisaTo(TextField textFieldDivisaTo) {
+        this.textFieldDivisaTo = textFieldDivisaTo;
+    }
+
+    public void setTextFieldDivisaFrom(TextField textFieldDivisaFrom) {
+        this.textFieldDivisaFrom = textFieldDivisaFrom;
+    }
+
+    public void setButtonCambio(Button buttonCambio) {
+        this.buttonCambio = buttonCambio;
+    }
+
+    public void setEuro(Divisa euro) {
+        this.euro = euro;
+    }
+
+    public void setLibra(Divisa libra) {
+        this.libra = libra;
+    }
+
+    public void setDolar(Divisa dolar) {
+        this.dolar = dolar;
+    }
+
+    public void setYen(Divisa yen) {
+        this.yen = yen;
+    }
+
+    public void setAlert(Alert alert) {
+        this.alert = alert;
+    }
+
+    public GridPane getGridpane() {
+        return gridpane;
+    }
+
+    public ColumnConstraints getFirstColumn() {
+        return firstColumn;
+    }
+
+    public ColumnConstraints getSecondColumn() {
+        return secondColumn;
+    }
+
+    public HBox gethBox() {
+        return hBox;
+    }
+
+    public Divisa getTo() {
+        return to;
+    }
+
+    public Divisa getFrom() {
+        return from;
+    }
+
+    public ComboBox<Divisa> getComboBoxDivisaTo() {
+        return comboBoxDivisaTo;
+    }
+
+    public ComboBox<Divisa> getComboBoxDivisaFrom() {
+        return comboBoxDivisaFrom;
+    }
+
+    public TextField getTextFieldDivisaTo() {
+        return textFieldDivisaTo;
+    }
+
+    public TextField getTextFieldDivisaFrom() {
+        return textFieldDivisaFrom;
+    }
+
+    public Button getButtonCambio() {
+        return buttonCambio;
+    }
+
+    public Divisa getEuro() {
+        return euro;
+    }
+
+    public Divisa getLibra() {
+        return libra;
+    }
+
+    public Divisa getDolar() {
+        return dolar;
+    }
+
+    public Divisa getYen() {
+        return yen;
+    }
+
+    public Alert getAlert() {
+        return alert;
+    }
 }
