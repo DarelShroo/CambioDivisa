@@ -1,7 +1,7 @@
 # CambioDivisa
-###Proyecto Maven
+## Proyecto Maven
 
-- Ejecutar Proyecto
+- Ejecutar el proyecto
   ~~~
   mvn compile exec:java
   ~~~
